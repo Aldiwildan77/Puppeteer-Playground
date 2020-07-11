@@ -1,0 +1,12 @@
+{
+  "name": "puppet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Ibrahimsyah/Puppeteer-Playground",
+  "author": "Ibrahimsyah Z <ibra.himsyah10@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "easy-pdf-merge": "^0.2.2",
+    "puppeteer": "^5.0.0"
+  }
+}
