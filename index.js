@@ -9,7 +9,7 @@ const buildCover = async (browser) => {
   const coverPath = `${tempPath}/cover.pdf`;
   const pageBreak = '<p style="page-break-after: always;"> </p>';
   const cover =
-    `<img class="cover-image" src="https://wallpapercave.com/wp/wp3611699.jpg"/>` +
+    `<img class="cover-image" src="https://wallpapercave.com/wp/wp5995224.jpg"/>` +
     pageBreak;
   const page = await browser.newPage();
   const options = {
@@ -17,6 +17,7 @@ const buildCover = async (browser) => {
     printBackground: true,
     path: coverPath,
   };
+  await page.setDefaultNavigationTimeout(0); 
   await page.setContent(cover);
   await page.addStyleTag({
     content: `
@@ -27,7 +28,7 @@ const buildCover = async (browser) => {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
   }
   `,
   });
